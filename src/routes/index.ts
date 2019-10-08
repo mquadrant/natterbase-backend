@@ -3,7 +3,7 @@ const router = express.Router()
 
 /* GET home page. */
 router.get('/', function(_req: Request, res: Response) {
-    res.render('index', { title: 'Express' })
+    res.send({ message: 'Problem Solving Api homepage' })
 })
 
 export default router
