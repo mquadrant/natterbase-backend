@@ -1,34 +1,23 @@
-import express, { Request, Response } from 'express'
+import express from 'express'
+import { availableMethods } from './../controllers'
+import {
+    inputValidation,
+    itemRemover,
+    aladdinTravel,
+} from './../controllers/methodsController'
+
 const router = express.Router()
 
-/* GET home page. */
-router.get('/', function(_req: Request, res: Response) {
-    res.json({
-        message: 'Methods available in this API',
-        apiDocUrl: '',
-        data: [
-            {
-                id: 1,
-                name: 'Input Validation',
-                description:
-                    'Function to perform input validation on a request body',
-                url: '',
-            },
-            {
-                id: 2,
-                name: 'Item Remover',
-                description: 'Function to remove an item from an object',
-                url: '',
-            },
-            {
-                id: 3,
-                name: 'Aladdin traveling carpet',
-                description:
-                    'Function to find the lowest index of the starting points that Aladdin can start his journey and be able to visit all the magical locations on his path',
-                url: '',
-            },
-        ],
-    })
-})
+/* GET available methods */
+router.get('/', availableMethods)
+
+/* POST input validation router */
+router.post('/input_validation', inputValidation)
+
+/* POST object item remover router */
+router.post('/item_remover', itemRemover)
+
+/* POST aladdin travelling router */
+router.post('/aladdin_travel', aladdinTravel)
 
 export default router
