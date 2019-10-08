@@ -1,0 +1,9 @@
+/node_modules
+/dist
+node_modules
+/coverage
+/.DS_Store
+.env
+
+.DS_Store
+.DS_Stores
