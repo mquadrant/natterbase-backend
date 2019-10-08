@@ -1,4 +1,4 @@
-export default function(data: any, rules: string[]) {
+export default function(data: object, rules: string[]) {
     const rulesObj: any = {}
     const result: any = {
         invalidItem: [],
