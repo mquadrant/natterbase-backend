@@ -16,20 +16,20 @@ export const availableMethods = async function(
                 name: 'Input Validation',
                 description:
                     'Function to perform input validation on a request body',
-                url: `${env.backendURL}/api/input_validation`,
+                urlPOST: `${env.backendURL}/api/input_validation`,
             },
             {
                 id: 2,
                 name: 'Item Remover',
                 description: 'Function to remove an item from an object',
-                url: `${env.backendURL}/api/item_remover`,
+                urlPOST: `${env.backendURL}/api/item_remover`,
             },
             {
                 id: 3,
                 name: 'Aladdin traveling carpet',
                 description:
                     'Function to find the lowest index of the starting points that Aladdin can start his journey and be able to visit all the magical locations on his path',
-                url: `${env.backendURL}/api/aladdin_travel`,
+                urlPOST: `${env.backendURL}/api/aladdin_travel`,
             },
         ],
     })
