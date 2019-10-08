@@ -1,20 +1,23 @@
 import { Request, Response, NextFunction } from 'express'
+import inputValidationFunction from './../functions/inputValidation'
 
-//Available methods
-export const inputValidation = async function(
-    _req: Request,
-    _res: Response,
+export const inputValidation = function(
+    req: Request,
+    res: Response,
     _next: NextFunction
-) {}
+) {
+    const result = inputValidationFunction(req.body.data, req.body.rules)
+    res.json({
+        data: result,
+    })
+}
 
-//Available methods
 export const itemRemover = async function(
     _req: Request,
     _res: Response,
     _next: NextFunction
 ) {}
 
-//Available methods
 export const aladdinTravel = async function(
     _req: Request,
     _res: Response,
