@@ -8,4 +8,4 @@ These APIs demonstrated the use of NodeJs, ExpressJs to solve the following prob
 
 ### Click on the link below to check out our API documentation
 
-[Mock premier league Api documentation]()
+[Mock premier league Api documentation](https://documenter.getpostman.com/view/8220979/SVtTzUa6)
