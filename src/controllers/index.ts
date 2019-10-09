@@ -9,7 +9,7 @@ export const availableMethods = async function(
 ) {
     res.json({
         message: 'Methods available in this API',
-        apiDocUrl: '',
+        apiDocUrl: 'https://documenter.getpostman.com/view/8220979/SVtTzUa6',
         data: [
             {
                 id: 1,
