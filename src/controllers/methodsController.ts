@@ -1,7 +1,8 @@
 import { Request, Response, NextFunction } from 'express'
 import inputValidationFunction from './../functions/inputValidation'
 import itemRemoverFunction from './../functions/itemRemover'
-import { validateItem, removeItem } from './../joi_validation'
+import aladdinTravelFunction from './../functions/aladdinTravel'
+import { validateItem, removeItem, travelAladdin } from './../joi_validation'
 
 export const inputValidation = function(
     req: Request,
@@ -30,7 +31,7 @@ export const inputValidation = function(
     }
 }
 
-export const itemRemover = async function(
+export const itemRemover = function(
     req: Request,
     res: Response,
     _next: NextFunction
@@ -60,8 +61,29 @@ export const itemRemover = async function(
     }
 }
 
-export const aladdinTravel = async function(
-    _req: Request,
-    _res: Response,
+export const aladdinTravel = function(
+    req: Request,
+    res: Response,
     _next: NextFunction
-) {}
+) {
+    //joi validation
+    const { error } = travelAladdin(req.body)
+    if (error) {
+        // send a 422 error response if validation fails
+        return res.status(422).json({
+            status: 'error',
+            message: 'Invalid request data',
+            data: req.body,
+        })
+    } else {
+        const result = aladdinTravelFunction(
+            req.body.magic,
+            req.body.dist,
+            req.body.n
+        )
+        return res.status(201).json({
+            status: 'success',
+            portal: result,
+        })
+    }
+}
