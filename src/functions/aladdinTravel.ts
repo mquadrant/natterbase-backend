@@ -21,6 +21,7 @@ export default function(magic: number[], dist: number[], n: number) {
                 }
             }
         }
+        //break out if any of the index satisfies this condition
         if (!confirm && magicSum >= 0) {
             portal = i
             break
