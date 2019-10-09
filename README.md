@@ -10,5 +10,5 @@ These APIs demonstrated the use of NodeJs, ExpressJs to solve the following prob
 
 [Api documentation](https://documenter.getpostman.com/view/8220979/SVtTzUa6)
 
-#### Click to hosted file
+#### Link to hosted file
 https://natter-backend.herokuapp.com/api
