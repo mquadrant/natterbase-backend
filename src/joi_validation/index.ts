@@ -18,4 +18,14 @@ function removeItem(requestValidation: Express.Request) {
     return Joi.validate(requestValidation, schema)
 }
 
-export { validateItem, removeItem }
+function travelAladdin(requestValidation: Express.Request) {
+    // define joi validation schema for item remove api
+    const schema = Joi.object().keys({
+        n: Joi.number(),
+        magic: Joi.array(),
+        dist: Joi.array(),
+    })
+    return Joi.validate(requestValidation, schema)
+}
+
+export { validateItem, removeItem, travelAladdin }
