@@ -81,9 +81,17 @@ export const aladdinTravel = function(
             req.body.dist,
             req.body.n
         )
-        return res.status(201).json({
-            status: 'success',
-            portal: result,
-        })
+        if (result < 0) {
+            return res.status(201).json({
+                status: 'success',
+                message: 'No solution in all path aladdin should take',
+                portal: result,
+            })
+        } else {
+            return res.status(201).json({
+                status: 'success',
+                portal: result,
+            })
+        }
     }
 }
