@@ -85,12 +85,12 @@ export const aladdinTravel = function(
             return res.status(201).json({
                 status: 'success',
                 message: 'No solution in all path aladdin should take',
-                portal: result,
+                lowestIndex: result,
             })
         } else {
             return res.status(201).json({
                 status: 'success',
-                portal: result,
+                lowestIndex: result,
             })
         }
     }
