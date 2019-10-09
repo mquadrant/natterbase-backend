@@ -54,7 +54,7 @@ describe('POST api/aladdin_travel', () => {
             .post('/api/aladdin_travel')
             .send({
                 n: 4,
-                magic: [2, 2, 5, 4],
+                magic: [1, 2, 3, 6],
                 dist: [2, 3, 4, 2],
             })
         expect(res.status).toBe(201)

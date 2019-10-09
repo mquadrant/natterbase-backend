@@ -11,7 +11,7 @@ test('When the item is found and removed', () => {
             },
             'type'
         )
-    ).toBe({
+    ).toStrictEqual({
         result: true,
         message: {
             crux: 'indices',
@@ -31,7 +31,7 @@ test('When the item is not found in the data', () => {
             },
             'shape'
         )
-    ).toBe({
+    ).toStrictEqual({
         result: false,
         message: 'attribute not found',
     })

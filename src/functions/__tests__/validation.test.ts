@@ -11,7 +11,7 @@ test('When all the items are present in the data', () => {
             },
             ['type', 'crux', 'color', 'title']
         )
-    ).toBe({
+    ).toStrictEqual({
         result: 'valid',
         invalidItem: [],
         itemNotPresent: [],
@@ -28,7 +28,7 @@ test('When not all the items are present in the data', () => {
             },
             ['type', 'crux', 'color', 'title']
         )
-    ).toBe({
+    ).toStrictEqual({
         result: 'invalid',
         invalidItem: [],
         itemNotPresent: ['title'],
@@ -45,7 +45,7 @@ test('When an item is invalid and are not to be in the data', () => {
             },
             ['type', 'crux']
         )
-    ).toBe({
+    ).toStrictEqual({
         result: 'invalid',
         invalidItem: ['shape'],
         itemNotPresent: [],
@@ -63,7 +63,7 @@ test('When some item are missing and the data contain invalid item', () => {
             },
             ['type', 'crux', 'color', 'title']
         )
-    ).toBe({
+    ).toStrictEqual({
         result: 'invalid',
         invalidItem: ['shape'],
         itemNotPresent: ['title'],
