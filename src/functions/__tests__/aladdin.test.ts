@@ -14,3 +14,6 @@ test('When no solution to completing the journey', () => {
 test('When the last portal is the entry point to complete the journey', () => {
     expect(aladdin([1, 2, 3, 6], [2, 3, 4, 2], 4)).toBe(3)
 })
+test('When the second portal is the entry point to complete the journey', () => {
+    expect(aladdin([1, 4, 5, 4], [2, 3, 4, 2], 4)).toBe(1)
+})

@@ -7,8 +7,6 @@ export default function(magic: number[], dist: number[], n: number) {
         let confirm = false
         //traveling through circular path
         while (start !== end) {
-            start = start % n
-            end = end % n
             //check if magic is not enough
             if (magicSum < dist[start]) {
                 confirm = true
@@ -20,6 +18,8 @@ export default function(magic: number[], dist: number[], n: number) {
                     magicSum -= dist[start]
                 }
             }
+            start = start % n
+            end = end % n
         }
         //break out if any of the index satisfies this condition
         if (!confirm && magicSum >= 0) {
